@@ -1,0 +1,45 @@
+1.B
+2.C
+3.A
+4.D
+5.C
+6.B
+7.B
+8.A
+9.A,B,C
+10.B
+
+11.
+Although linear transformations make the neural network simpler, 
+but this network would be less powerful and will not be able to learn the complex patterns from the data. 
+A neural network without an activation function is essentially just a linear regression model.
+
+12.
+ Forward propagation :-
+Forward propagation is how neural networks make predictions. 
+Input data is “forward propagated” through the network, layer by layer to the final layer which outputs a prediction.
+ 
+ Backward propagation :-
+Here We update the weight of each neuron by going back to each nueuron.
+We keep going back & calculate the output O/P=Y-Yhat  until our O/P value is within range specified.(Generelly this value is very very low)
+
+13.
+Stochastic Gradient Descent:
+This Uses only single training example to calculate the gradient and update parameters.
+
+Batch Gradient Descent:
+This Calculate the gradients for the whole dataset and perform just one update at each iteration.
+
+Mini-batch Gradient Descent:
+This Mini-batch gradient is a variation of stochastic gradient descent where instead of single training example, mini-batch of samples is used. It’s one of the most popular optimization algorithms. 
+
+14.
+a)Easily fits in the memory.
+b)It is computationally efficient.
+c)Benefit from vectorization.
+d)If stuck in local minimums, some noisy steps can lead the way out of them.
+e)Average of the training samples produces stable error gradients and convergence.
+
+15.
+
+Transfer learning is the reuse of a pre-trained model on a new problem. It's currently very popular in deep learning because it can train deep neural networks with comparatively little data.
