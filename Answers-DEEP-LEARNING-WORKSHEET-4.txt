@@ -1,0 +1,134 @@
+1.A
+2.B
+3.A
+4.D
+5.A
+6.-----------------
+7.D
+8.A
+9.A,D
+10.A,B
+11.
+
+CNN architecture is inspired by the organization and functionality of the visual cortex and designed to mimic the connectivity pattern of neurons within the human brain. 
+The neurons within a CNN are split into a three-dimensional structure, with each set of neurons analyzing a small region or feature of the image.
+
+A typical CNN design begins with feature extraction and finishes with classification. 
+Feature extraction is performed by alternating convolution layers with subsambling layers. 
+Classification is performed with dense layers followed by a final softmax layer.
+
+
+12.
+
+A convolutional neural network (CNN) is a specific type of artificial neural network that uses perceptrons, 
+a machine learning unit algorithm, for supervised learning, to analyze data. 
+
+CNNs apply to image processing, natural language processing and other kinds of cognitive tasks. 
+A convolutional neural network is also known as a ConvNet.
+
+A convolution is how the input is modified by a filter.
+ In convolutional networks, multiple filters are taken to slice through the image and map them one by one and learn different portions of an input image. 
+Imagine a small filter sliding left to right across the image from top to bottom and that moving filter is looking for, say, a dark edge.
+
+13.
+
+Average Pooling--- is different from Max Pooling in the sense that it retains much information about the “less important” elements of a block, or pool.
+ Whereas Max Pooling--- simply throws them away by picking the maximum value, Average Pooling blends them in. 
+This can be useful in a variety of situations, where such information is useful.
+
+Although both are used for same reason, I think max pooling is better for extracting the extreme features. 
+Average pooling sometimes can’t extract good features because it takes all into count and results an average value which may/may not be important for object detection type tasks.
+
+14.
+
+Padding is to add extra pixels outside the image. 
+And zero padding means every pixel value that we add is zero. 
+
+Padding is a term relevant to convolutional neural networks as it refers to the amount of pixels added to an image when it is being processed by the kernel of a CNN. 
+For example, if the padding in a CNN is set to zero, then every pixel value that is added will be of value zero.
+
+The pixel in the corner will only get covers one time but if you take the middle pixel it will get covered more than once.
+Basically what it means is we have more info on that middle pixel 
+BUT there are the two main downsides:-
+
+1.Shrinking outputs
+2.Loosing information on corners of the image.
+
+TO overcome these downsides we use padding in a CNN.
+
+
+15.
+
+https://towardsdatascience.com/four-common-types-of-neural-network-layers-c0d3bb2a966c
+
+A)Fully connected layers
+
+This Connect every neuron in one layer to every neuron in the next layer. Fully connected layers are found in all different types of neural networks ranging from standard neural networks to convolutional neural networks (CNN).
+Fully connected layers can become computationally expensive as their input grows, resulting in a combinatorial explosion of vector operations to be performed, and potentially poor scalability. As such, they are commonly used for specific purposes within neural networks such as classifying image data.
+
+Use Cases:-
+1.Experimentation or learning ML using fully connected neural networks.
+2.In CNNs to classify images for computer vision.
+
+Hyperparameters Commonly Associated with Fully Connected Layers
+1.Activation function
+2.Number of neurons
+3.Dropout
+
+B)A Convolution Layer
+ 
+This is an important type of layer in a CNN. Its most common use is for detecting features in images, in which it uses a filter to scan an image, a few pixels at a time, and outputs a feature map that classifies each feature found.
+The filter (sometimes called kernel) is a set of n-dimensional weights that are multiplied against the input, where the filter’s dimensions match that of the input (e.g., two dimensions when dealing with 2D images). The filter describes the probabilities that a given pattern of pixels represents a feature. Thus the number of filter weights (i.e., size of the filter) are smaller than the input, and the multiplication performed by the layer’s convolution process is performed on “patches” of the image that match the filter size.
+Multiplication is systematically repeated from left to right and top to bottom over the entire image to detect features. The number of pixels by which the filter moves for the next iteration is called the stride. Padding may be added around the input image to ensure that the filter always fits within the total bounds of the image for a given stride.
+
+Use Cases:-
+1.Analyzing imagery for image recognition and classification.
+
+Hyperparameters Commonly Associated with Convolution Layer
+
+1.Dimensionality
+2.Patch size
+3.Stride
+4.Number of feature maps to generate
+5.Padding strategy
+6.Activate function
+7.Dropout
+8.Pooling
+
+C)A Deconvolution Layer
+ 
+THIS is a transposed convolution process that effectively upsamples data to a higher resolution. This can include image data and/or feature maps generated from a convolution layer, or other types of data. For image data, the upsampling resolution output by deconvolution may be the same as the original input image, or may be different.
+Common Use Cases:-
+
+1.Upsampling images
+
+Hyperparameters Commonly Associated with Deconvolution Layer
+1.Dimensionality
+2.Stride
+3.Number of feature maps to generate
+4.Padding strategy
+5.Activate function
+6.Dropout
+
+D)A Recurrent Layer 
+This includes a “looping” capability such that its input consists of both the data to analyze as well as the output from a previous calculation performed by that layer. Recurrent layers form the basis of recurrent neural networks (RNNs), effectively providing them with memory (i.e., maintain a state across iterations), while their recursive nature makes RNNs useful for cases involving sequential data like natural language and time series. They’re also useful for mapping inputs to outputs of different types and dimensions.
+Common Use Cases:-
+
+1.Classifying sentiments into positive and negative.
+2.Generating text descriptions of what an image contains.
+3.Translating paragraphs of text to another language.
+
+Hyperparameters Commonly Associated with Recurrent Layer
+1.Dimensionality
+2.Type of recurrent neural network (LSTM, GRU, or standard RNN layer)
+3.Return sequence
+4.Dropout
+
+Conclusion:-
+
+Neural networks are the current state-of-the-art when it comes to machine learning and there are many topologies and layer types to choose from.
+Each type of neural network excels at solving a specific domain of problems, 
+and each is tuned with hyperparameters that optimize those solutions. 
+Furthermore, ML practitioners can now access many ML frameworks and tools that make it easier than ever to implement ML models built around neural network topologies.
+
+
